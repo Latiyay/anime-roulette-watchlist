@@ -37,7 +37,7 @@ const spin = () => {
               Spin
             </button>
           </div>
-          <AnimeCard loading />
+          <AnimeCard error="Whatever" />
         </section>
       </div>
     </div>
