@@ -58,15 +58,15 @@ watch(
 
 <template>
   <section
-    class="rounded-3xl border border-slate-700/70 bg-slate-900/60 p-5 shadow-2xl shadow-slate-950/30 backdrop-blur-sm"
+    class="rounded-3xl border border-pink-900/50 bg-gray-900/70 p-5 shadow-2xl shadow-pink-950/30 backdrop-blur-sm"
   >
     <div
       v-if="props.loading"
       class="space-y-4"
     >
-      <div class="flex items-center gap-3 text-cyan-300">
+      <div class="flex items-center gap-3 text-pink-300">
         <div
-          class="h-5 w-5 animate-spin rounded-full border-2 border-cyan-400 border-t-transparent"
+          class="h-5 w-5 animate-spin rounded-full border-2 border-pink-400 border-t-transparent"
         ></div>
         <p class="font-semibold tracking-wide">Shuffling Anime Reels...</p>
       </div>
@@ -112,7 +112,7 @@ watch(
         <p class="mt-1 text-sm text-slate-300">
           Score: <span class="font-semibold text-amber-300">{{ anime.score ?? 'N/A' }}</span> ·
           Episodes:
-          <span class="font-semibold text-cyan-300">{{ anime.episodes ?? 'Unknown' }}</span> ·
+          <span class="font-semibold text-pink-300">{{ anime.episodes ?? 'Unknown' }}</span> ·
           Rating:
           <span class="font-semibold text-pink-300">{{ anime.rating || 'Unknown' }}</span>
         </p>
@@ -123,7 +123,7 @@ watch(
         <button
           v-if="needsTruncation"
           type="button"
-          class="ml-2 text-cyan-300 underline-offset-4 hover:underline"
+          class="ml-2 text-pink-300 underline-offset-4 hover:underline"
           @click="synopsisExpanded = !synopsisExpanded"
         >
           {{ synopsisExpanded ? 'Show less' : 'Read more' }}
@@ -133,7 +133,7 @@ watch(
       <div class="flex flex-wrap gap-3">
         <button
           type="button"
-          class="rounded-full border border-cyan-300/60 bg-cyan-400/15 px-4 py-2 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-400/25 disabled:cursor-not-allowed disabled:opacity-50"
+          class="rounded-full border border-pink-300/60 bg-pink-400/15 px-4 py-2 text-sm font-semibold text-pink-100 transition hover:bg-pink-400/25 disabled:cursor-not-allowed disabled:opacity-50"
           :disabled="inWatchlist"
           @click="emit('add', anime)"
         >

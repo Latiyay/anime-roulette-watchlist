@@ -11,11 +11,11 @@ const emit = defineEmits(['remove'])
 
 <template>
   <aside
-    class="rounded-3xl border border-slate-700/70 bg-slate-900/60 p-5 shadow-2xl shadow-slate-950/30 backdrop-blur-sm"
+    class="rounded-3xl border border-pink-900/50 bg-gray-900/70 p-5 shadow-2xl shadow-pink-950/30 backdrop-blur-sm"
   >
     <div class="mb-4 flex items-center justify-between">
       <h2 class="text-xl font-bold text-white">Watchlist</h2>
-      <span class="rounded-full bg-slate-700 px-3 py-1 text-xs font-semibold text-slate-200">{{
+      <span class="rounded-full bg-pink-900/60 px-3 py-1 text-xs font-semibold text-pink-200">{{
         items.length
       }}</span>
     </div>
@@ -34,7 +34,7 @@ const emit = defineEmits(['remove'])
       <li
         v-for="item in items"
         :key="item.mal_id"
-        class="rounded-2xl border border-slate-700/70 bg-slate-800/60 p-3"
+        class="rounded-2xl border border-pink-900/50 bg-gray-800/60 p-3"
       >
         <div class="flex gap-3">
           <img
@@ -62,7 +62,7 @@ const emit = defineEmits(['remove'])
                 :href="item.url"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-xs font-semibold text-cyan-300 hover:underline"
+                class="text-xs font-semibold text-pink-300 hover:underline"
               >
                 MAL Link
               </a>
